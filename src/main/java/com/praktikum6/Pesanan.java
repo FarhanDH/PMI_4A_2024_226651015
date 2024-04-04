@@ -4,6 +4,8 @@
  */
 package com.praktikum6;
 
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author farhandwihartanto
@@ -14,6 +16,7 @@ public class Pesanan extends javax.swing.JFrame {
      * Creates new form Pesanan
      */
     public Pesanan() {
+        ListModel = new DefaultListModel();
         initComponents();
     }
 
@@ -26,21 +29,213 @@ public class Pesanan extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        AreaKota = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        ListMinuman = new javax.swing.JList<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        CbMakanan = new javax.swing.JComboBox<>();
+        btnTambah = new javax.swing.JButton();
+        btnHapus = new javax.swing.JButton();
+        btnUbah = new javax.swing.JButton();
+        btnSisipkan = new javax.swing.JButton();
+        eUbah = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        eMakanan = new javax.swing.JTextField();
+        eKota = new javax.swing.JTextField();
+        eMinuman = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        AreaKota.setColumns(20);
+        AreaKota.setRows(5);
+        jScrollPane2.setViewportView(AreaKota);
+
+        jScrollPane1.setViewportView(jScrollPane2);
+
+        jScrollPane3.setViewportView(ListMinuman);
+
+        jScrollPane4.setViewportView(CbMakanan);
+
+        btnTambah.setText("Tambah");
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTambahActionPerformed(evt);
+            }
+        });
+
+        btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
+
+        btnUbah.setText("Ubah");
+        btnUbah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUbahActionPerformed(evt);
+            }
+        });
+
+        btnSisipkan.setText("Sisipkan");
+        btnSisipkan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSisipkanActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("SF Pro Display", 3, 14)); // NOI18N
+        jLabel1.setText("Minuman");
+
+        jLabel2.setFont(new java.awt.Font("SF Pro Display", 3, 14)); // NOI18N
+        jLabel2.setText("Kota");
+
+        jLabel3.setFont(new java.awt.Font("SF Pro Display", 3, 14)); // NOI18N
+        jLabel3.setText("Makanan");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(110, 110, 110)
+                .addComponent(jLabel3)
+                .addGap(62, 62, 62))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnSisipkan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnHapus, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnTambah, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnUbah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(eKota, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(eUbah)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(eMinuman, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(35, 35, 35))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addComponent(eMakanan, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eMakanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eKota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eMinuman, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jScrollPane3)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnTambah)
+                    .addComponent(eUbah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHapus)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnUbah)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSisipkan)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
+        AreaKota.append("Gersik");
+        AreaKota.append("\n");
+        AreaKota.append("Malang " + "\n");
+        AreaKota.append("Surabaya");
+        AreaKota.append("\n");
+        CbMakanan.insertItemAt("Rujak", 0);
+        CbMakanan.insertItemAt("Rawon", 1);
+        CbMakanan.insertItemAt("Sate", 2);
+        ListModel.add(0, "Sprite");
+        ListModel.add(1, "Fanta");
+        ListModel.add(2, "Es Batu");
+        ListModel.add(3, "Kopi");
+        ListMinuman.setModel(ListModel);
+    }//GEN-LAST:event_btnTambahActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        if (AreaKota.getLineCount() > 0) {
+            AreaKota.setSelectionStart(0);
+            AreaKota.setSelectionEnd(12);
+            int posisi = AreaKota.getSelectedText().indexOf("\n");
+            AreaKota.replaceRange("", 0, posisi + 1);
+            if (posisi == -1) {
+                AreaKota.replaceRange("", 0, 8);
+            }
+        }
+        if (CbMakanan.getItemCount() > 0) {
+            CbMakanan.removeItemAt(0);
+        }
+        if (ListModel.getSize() > 0) {
+            ListModel.remove(0);
+        }
+    }//GEN-LAST:event_btnHapusActionPerformed
+
+    private void btnUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbahActionPerformed
+        if (AreaKota.getLineCount() > 0) {
+            AreaKota.setSelectionStart(0);
+            AreaKota.setSelectionEnd(12);
+            int posisi = AreaKota.getSelectedText().indexOf("\n");
+            AreaKota.replaceRange(eUbah.getText() + "\n", 0, posisi + 1);
+            if (posisi == -1) {
+                AreaKota.replaceRange(eUbah.getText() + "\n", 0, 8);
+            }
+        }
+        if (CbMakanan.getItemCount() > 0) {
+            CbMakanan.removeItemAt(1);
+            CbMakanan.insertItemAt(eUbah.getText(), 1);
+        }
+        if (ListModel.getSize() > 0) {
+            ListModel.remove(1);
+            ListModel.insertElementAt(eUbah.getText(), 1);
+        }
+    }//GEN-LAST:event_btnUbahActionPerformed
+
+    private void btnSisipkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSisipkanActionPerformed
+        AreaKota.append("Lamongan");
+        AreaKota.append("\n" + eKota.getText());
+        AreaKota.insert("Kab. ", 0);
+        CbMakanan.insertItemAt("Soto", 3);
+        CbMakanan.insertItemAt("Pecel", 0);
+        CbMakanan.insertItemAt(eMakanan.getText(), 0);
+        ListModel.insertElementAt("Jus Apokat", 4);
+        ListModel.insertElementAt("Jus Tomat", 5);
+        ListModel.insertElementAt(eMinuman.getText(), 0);
+    }//GEN-LAST:event_btnSisipkanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -56,16 +251,24 @@ public class Pesanan extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Pesanan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pesanan.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Pesanan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pesanan.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Pesanan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pesanan.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Pesanan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pesanan.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -77,6 +280,25 @@ public class Pesanan extends javax.swing.JFrame {
         });
     }
 
+    DefaultListModel ListModel;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea AreaKota;
+    private javax.swing.JComboBox<String> CbMakanan;
+    private javax.swing.JList<String> ListMinuman;
+    private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnSisipkan;
+    private javax.swing.JButton btnTambah;
+    private javax.swing.JButton btnUbah;
+    private javax.swing.JTextField eKota;
+    private javax.swing.JTextField eMakanan;
+    private javax.swing.JTextField eMinuman;
+    private javax.swing.JTextField eUbah;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     // End of variables declaration//GEN-END:variables
 }
